@@ -28,17 +28,23 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="tech-button-primary group min-w-[200px]"
+              asChild
             >
-              View Our Projects
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <a href="#projects">
+                View Our Projects
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <Button 
               size="lg" 
               className="tech-button-accent group min-w-[180px]"
+              asChild
             >
-              <Play className="mr-2 h-5 w-5" />
-              Contact Us
+              <a href="#contact">
+                <Play className="mr-2 h-5 w-5" />
+                Contact Us
+              </a>
             </Button>
           </div>
         </div>
