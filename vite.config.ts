@@ -9,8 +9,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",   // Allow access via IPv6 and localhost
     port: 8080,   // Dev server port
   },
+  assetsInclude: ["**/*.JPG", "**/*.jpg"],
   plugins: [
-    react(),                     // React SWC plugin for fast compilation
+    react(),                     // React plugin for compilation
     mode === "development" && componentTagger(), // Only run in dev
   ].filter(Boolean),             // Filter out falsy plugins
   resolve: {

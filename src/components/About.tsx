@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Target, Zap } from "lucide-react";
-import leadEngineerPhoto from "@/assets/lead-engineer.jpg";
+import leadEngineerPhoto from "@/assets/IMG_2381.JPG";
 
 const About = () => {
   const features = [

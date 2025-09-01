@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,11 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="p-2 bg-gradient-logo rounded-lg shadow-soft">
-              <Code2 className="h-6 w-6 text-white" />
+              <img 
+                src={logo} 
+                alt="Kismayo ICT Solutions Logo" 
+                className="h-6 w-6 object-cover rounded"
+              />
             </div>
             <span className="text-xl font-bold text-tech-dark">
               Kismayo ICT
