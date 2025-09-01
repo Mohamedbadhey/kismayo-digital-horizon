@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Target, Zap } from "lucide-react";
+import leadEngineerPhoto from "@/assets/lead-engineer.jpg";
 
 const About = () => {
   const features = [
@@ -37,6 +38,51 @@ const About = () => {
             cutting-edge software solutions. Our founder serves as lead software engineer, 
             bringing years of experience to every project we undertake.
           </p>
+        </div>
+
+        {/* Lead Engineer Section */}
+        <div className="bg-gradient-card rounded-2xl shadow-floating p-8 md:p-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-section-title text-tech-dark mb-6">
+                Meet Our Lead Software Engineer
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                With years of experience in software development and a passion for innovation, 
+                our founder leads every project with technical excellence and creative problem-solving. 
+                From concept to deployment, we ensure every solution meets the highest standards.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-logo-blue rounded-full"></div>
+                  <span className="text-tech-dark font-medium">5+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-logo-green rounded-full"></div>
+                  <span className="text-tech-dark font-medium">Full-Stack Developer</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-logo-blue rounded-full"></div>
+                  <span className="text-tech-dark font-medium">Systems Architect</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-logo-green rounded-full"></div>
+                  <span className="text-tech-dark font-medium">Project Leader</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="order-1 lg:order-2">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-logo rounded-2xl opacity-20"></div>
+                <img 
+                  src={leadEngineerPhoto}
+                  alt="Lead Software Engineer - Kismayo ICT Solutions"
+                  className="relative w-80 h-80 object-cover rounded-2xl shadow-elevated mx-auto"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
