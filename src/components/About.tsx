@@ -78,7 +78,11 @@ const About = () => {
                 <img 
                   src={leadEngineerPhoto}
                   alt="Lead Software Engineer - Kismayo ICT Solutions"
-                  className="relative w-80 h-80 object-cover rounded-2xl shadow-elevated mx-auto"
+                  className="relative w-80 h-80 object-cover rounded-2xl shadow-elevated mx-auto transition-opacity duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={(e) => (e.target as HTMLImageElement).style.opacity = '1'}
+                  style={{ opacity: 0 }}
                 />
               </div>
             </div>
