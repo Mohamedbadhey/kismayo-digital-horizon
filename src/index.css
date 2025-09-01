@@ -2,39 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Kismayo ICT Solutions Design System - Modern Professional Tech Company */
 
 @layer base {
   :root {
+    /* Brand Colors - Professional Blue & Teal Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Professional Blue */
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 214 84% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Clean Gray */  
+    --secondary: 210 11% 96%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 11% 96%;
+    --muted-foreground: 215 13% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Vibrant Teal for CTAs */
+    --accent: 175 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 175 70% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 12% 90%;
+    --input: 215 12% 90%;
+    --ring: 214 84% 56%;
+
+    /* Tech Company Specific Tokens */
+    --tech-blue: 214 84% 56%;
+    --tech-teal: 175 70% 50%;
+    --tech-dark: 215 25% 15%;
+    --tech-light: 210 11% 96%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(214 84% 56%) 0%, hsl(175 70% 50%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 11% 98%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(175 70% 50%) 0%, hsl(175 70% 45%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -1px hsl(215 25% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -2px hsl(215 25% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 15% / 0.1), 0 10px 10px -5px hsl(215 25% 15% / 0.04);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 0.5rem;
 
@@ -100,6 +125,73 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Gradient Utilities */
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+  
+  /* Shadow Utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-floating {
+    box-shadow: var(--shadow-xl);
+  }
+  
+  /* Animation Utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+  
+  /* Tech Component Styles */
+  .tech-card {
+    @apply bg-gradient-card shadow-soft rounded-xl border border-border/50 p-6 transition-smooth hover:shadow-elevated hover:scale-[1.02];
+  }
+  
+  .tech-button-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-smooth hover:shadow-soft;
+  }
+  
+  .tech-button-accent {
+    @apply bg-gradient-cta hover:scale-105 text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-spring shadow-soft;
+  }
+  
+  /* Typography Utilities */
+  .text-hero {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight;
+  }
+  
+  .text-section-title {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+  
+  .text-card-title {
+    @apply text-xl md:text-2xl font-semibold;
   }
 }
