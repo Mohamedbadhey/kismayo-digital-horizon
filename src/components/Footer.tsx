@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-gradient-hero rounded-lg">
+              <div className="p-2 bg-gradient-logo rounded-lg">
                 <Code2 className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-bold">Kismayo ICT Solutions</span>

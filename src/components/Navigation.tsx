@@ -19,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-hero rounded-lg shadow-soft">
+            <div className="p-2 bg-gradient-logo rounded-lg shadow-soft">
               <Code2 className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-tech-dark">

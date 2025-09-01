@@ -63,6 +63,10 @@ export default {
 					dark: 'hsl(var(--tech-dark))',
 					light: 'hsl(var(--tech-light))'
 				},
+				logo: {
+					blue: 'hsl(var(--logo-blue))',
+					green: 'hsl(var(--logo-green))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -78,6 +82,7 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-cta': 'var(--gradient-cta)',
+				'gradient-logo': 'var(--gradient-logo)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-md)',

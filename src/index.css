@@ -46,10 +46,15 @@
     --tech-dark: 215 25% 15%;
     --tech-light: 210 11% 96%;
     
+    /* Brand Logo Colors */
+    --logo-blue: 214 70% 65%;  /* Light dark blue */
+    --logo-green: 142 76% 36%; /* Green */
+    
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(214 84% 56%) 0%, hsl(175 70% 50%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 11% 98%) 100%);
     --gradient-cta: linear-gradient(135deg, hsl(175 70% 50%) 0%, hsl(175 70% 45%) 100%);
+    --gradient-logo: linear-gradient(135deg, hsl(214 70% 65%) 0%, hsl(142 76% 36%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
@@ -180,6 +185,11 @@
   
   .tech-button-accent {
     @apply bg-gradient-cta hover:scale-105 text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-spring shadow-soft;
+  }
+  
+  /* Brand Logo Utility */
+  .bg-gradient-logo {
+    background: var(--gradient-logo);
   }
   
   /* Typography Utilities */
