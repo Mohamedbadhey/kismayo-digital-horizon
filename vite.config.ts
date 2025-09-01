@@ -10,6 +10,15 @@ export default defineConfig(({ mode }) => ({
     port: 8080,   // Dev server port
   },
   assetsInclude: ["**/*.JPG", "**/*.jpg"],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+    target: 'es2015',
+    minify: 'esbuild',
+  },
   plugins: [
     react(),                     // React plugin for compilation
     mode === "development" && componentTagger(), // Only run in dev
